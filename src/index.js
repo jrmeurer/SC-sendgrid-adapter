@@ -12,7 +12,8 @@ let SimpleSendGridAdapter = mailOptions => {
         from: mailOptions.fromAddress,
         to: to,
         subject: subject,
-        text: text,
+        // text: text,
+        html: text, // Modify to use HTML
       }, function(err, json) {
         if (err) {
            reject(err);
